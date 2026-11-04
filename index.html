@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -217,6 +216,32 @@
             font-size: 13px;
         }
 
+        .project-link-section {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color, rgba(255,255,255,.1));
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 12px;
+            padding: 10px 16px;
+            border: 1px solid var(--primary-color, #20c9b5);
+            border-radius: 8px;
+            color: var(--primary-color, #20c9b5);
+            text-decoration: none;
+            font-weight: 600;
+            transition: .25s ease;
+            overflow-wrap: anywhere;
+        }
+
+        .project-link:hover {
+            background: var(--primary-color, #20c9b5);
+            color: #06131c;
+        }
+
         @media (max-width: 768px) {
             .projects-grid {
                 grid-template-columns: 1fr;
@@ -248,7 +273,6 @@
 </head>
 
 <body>
-
     <header class="header">
         <div class="container navbar">
             <a href="#home" class="logo">QUANG<span>MANH.</span></a>
@@ -268,15 +292,15 @@
             <div class="nav-actions">
                 <button id="themeToggle" class="theme-toggle" type="button"
                     aria-label="Chuyển đổi giao diện">☀</button>
+
                 <button id="menuToggle" class="menu-toggle" type="button"
                     aria-label="Mở menu">☰</button>
             </div>
         </div>
     </header>
 
-    <main>
 
-        <!-- TRANG CHỦ -->
+    <main>
         <section id="home" class="hero section">
             <div class="container hero-content">
 
@@ -317,7 +341,6 @@
             </div>
         </section>
 
-        <!-- GIỚI THIỆU -->
         <section id="about" class="section about">
             <div class="container">
 
@@ -389,7 +412,6 @@
             </div>
         </section>
 
-        <!-- MỤC TIÊU -->
         <section id="goals" class="section goals">
             <div class="container">
 
@@ -433,8 +455,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- KỸ NĂNG -->
         <section id="skills" class="section skills">
             <div class="container">
 
@@ -531,7 +551,6 @@
             </div>
         </section>
 
-        <!-- DỰ ÁN -->
         <section id="projects" class="section projects">
             <div class="container">
 
@@ -543,11 +562,10 @@
                 <p class="projects-intro">
                     Một số dự án học thuật mình đã thực hiện trong quá trình
                     học tập tại trường, tập trung vào cơ sở dữ liệu, cấu trúc
-                    dữ liệu và phân tích, thiết kế giải thuật.
+                    dữ liệu, phân tích thiết kế giải thuật và lập trình Web.
                 </p>
 
                 <div class="projects-grid">
-
                     <article class="project-card">
                         <div class="project-top">
                             <span class="project-category">Hệ quản trị cơ sở dữ liệu</span>
@@ -631,11 +649,38 @@
                         </div>
                     </article>
 
+                    <article class="project-card">
+                        <div class="project-top">
+                            <span class="project-category">Lập trình Web</span>
+                            <span class="project-number">04 / WEB DEVELOPMENT</span>
+                        </div>
+
+                        <h3>Group 9 – Member Introduction Website</h3>
+
+                        <p class="project-description">
+                            Xây dựng website giới thiệu các thành viên Nhóm 9,
+                            trình bày thông tin cá nhân, vai trò, kỹ năng và
+                            những nội dung liên quan đến từng thành viên.
+                        </p>
+
+                        <div class="project-tags">
+                            <span class="project-tag">HTML5</span>
+                            <span class="project-tag">CSS3</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">Responsive Design</span>
+                        </div>
+
+                        <div class="project-footer">
+                            <span class="project-type">● Group Project</span>
+                            <button class="project-detail-btn" type="button"
+                                data-project="project4">Chi tiết →</button>
+                        </div>
+                    </article>
+
                 </div>
             </div>
         </section>
 
-        <!-- CHI TIẾT DỰ ÁN 1 -->
         <div class="project-modal" id="project1" aria-hidden="true">
             <div class="project-modal-content" role="dialog" aria-modal="true"
                 aria-labelledby="project1-title">
@@ -690,14 +735,30 @@
                     </p>
                 </div>
 
+                <div class="project-video-section">
+                    <h3>VIDEO DEMO DỰ ÁN</h3>
+
+                    <p class="project-video-description">
+                        Video giới thiệu giao diện và các chức năng chính
+                        của hệ thống quản lý bệnh nhân.
+                    </p>
+
+                    <div class="project-video-wrapper">
+                        <video class="patient-management-demo"
+                            controls preload="metadata" width="100%">
+                            <source src="videos/patient-management-demo.mp4"
+                                type="video/mp4">
+                            Trình duyệt không hỗ trợ phát video.
+                        </video>
+                    </div>
+                </div>
+
                 <p class="project-note">
                     Dự án học thuật thuộc học phần Hệ quản trị cơ sở dữ liệu.
                 </p>
-
             </div>
         </div>
 
-        <!-- CHI TIẾT DỰ ÁN 2 -->
         <div class="project-modal" id="project2" aria-hidden="true">
             <div class="project-modal-content" role="dialog" aria-modal="true"
                 aria-labelledby="project2-title">
@@ -753,11 +814,9 @@
                 <p class="project-note">
                     Dự án nhóm thuộc học phần Cấu trúc dữ liệu và giải thuật.
                 </p>
-
             </div>
         </div>
 
-        <!-- CHI TIẾT DỰ ÁN 3 -->
         <div class="project-modal" id="project3" aria-hidden="true">
             <div class="project-modal-content" role="dialog" aria-modal="true"
                 aria-labelledby="project3-title">
@@ -814,11 +873,91 @@
                 <p class="project-note">
                     Dự án học thuật thuộc học phần Phân tích và thiết kế giải thuật.
                 </p>
+            </div>
+        </div>
+
+        <div class="project-modal" id="project4" aria-hidden="true">
+            <div class="project-modal-content" role="dialog" aria-modal="true"
+                aria-labelledby="project4-title">
+
+                <button class="project-modal-close" type="button"
+                    aria-label="Đóng cửa sổ">&times;</button>
+
+                <span class="project-category">WEB DEVELOPMENT</span>
+
+                <h2 id="project4-title">
+                    Group 9 – Member Introduction Website
+                </h2>
+
+                <p>
+                    Website giới thiệu thành viên Nhóm 9 được xây dựng
+                    nhằm cung cấp thông tin tổng quan về các thành viên
+                    trong nhóm, đồng thời giới thiệu vai trò, kỹ năng,
+                    thông tin cá nhân và những nội dung liên quan.
+                </p>
+
+                <div class="project-modal-tags">
+                    <span class="project-tag">HTML5</span>
+                    <span class="project-tag">CSS3</span>
+                    <span class="project-tag">JavaScript</span>
+                    <span class="project-tag">Responsive Design</span>
+                </div>
+
+                <div class="project-modal-section">
+                    <h3>CHỨC NĂNG CHÍNH</h3>
+                    <ul>
+                        <li>Giới thiệu thông tin tổng quan về Nhóm 9.</li>
+                        <li>Trình bày thông tin cá nhân của từng thành viên.</li>
+                        <li>Hiển thị vai trò và nhiệm vụ của các thành viên trong nhóm.</li>
+                        <li>Giới thiệu kỹ năng, sở thích và những thông tin liên quan.</li>
+                        <li>Thiết kế giao diện giúp người dùng dễ dàng theo dõi và tìm hiểu thông tin.</li>
+                    </ul>
+                </div>
+
+                <div class="project-modal-section">
+                    <h3>KIẾN THỨC ÁP DỤNG</h3>
+                    <ul>
+                        <li><strong>HTML5:</strong> Xây dựng cấu trúc và nội dung website.</li>
+                        <li><strong>CSS3:</strong> Thiết kế giao diện, bố cục và hiệu ứng hiển thị.</li>
+                        <li><strong>JavaScript:</strong> Xử lý các tương tác và chức năng trên website.</li>
+                        <li><strong>Responsive Design:</strong> Tối ưu giao diện trên nhiều kích thước màn hình.</li>
+                    </ul>
+                </div>
+
+                <div class="project-modal-section">
+                    <h3>KẾT QUẢ ĐẠT ĐƯỢC</h3>
+                    <p>
+                        Qua dự án, nhóm có cơ hội vận dụng kiến thức HTML,
+                        CSS và JavaScript vào việc xây dựng một website hoàn chỉnh.
+                        Đồng thời, các thành viên rèn luyện thêm kỹ năng làm việc nhóm,
+                        phân chia công việc, phối hợp và triển khai sản phẩm.
+                    </p>
+                </div>
+
+                <div class="project-link-section">
+                    <h3>TRUY CẬP WEBSITE</h3>
+
+                    <p>
+                        Nhấn vào liên kết bên dưới để truy cập website
+                        giới thiệu thành viên Nhóm 9.
+                    </p>
+
+                    <!-- Thay URL bên dưới bằng đường link website thực tế -->
+                    <a href="https://voductin789789.github.io/webgioithieubanthangiuaki/"
+                        class="project-link"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Xem website Nhóm 9 →
+                    </a>
+                </div>
+
+                <p class="project-note">
+                    Dự án nhóm thuộc học phần Lập trình Web.
+                </p>
 
             </div>
         </div>
 
-        <!-- HOẠT ĐỘNG -->
         <section id="journey" class="section journey">
             <div class="container">
 
@@ -896,7 +1035,6 @@
             </div>
         </section>
 
-        <!-- THÀNH TÍCH -->
         <section id="achievements" class="section achievements">
             <div class="container">
 
@@ -991,6 +1129,7 @@
 
             </div>
         </section>
+
         <section id="interests" class="section interests">
             <div class="container">
 
@@ -1055,7 +1194,6 @@
             </div>
         </section>
 
-        <!-- LIÊN HỆ -->
         <section id="contact" class="section contact">
             <div class="container">
 
@@ -1095,8 +1233,7 @@
                             <span class="contact-icon">GH</span>
                             <div>
                                 <h3>GitHub</h3>
-                                <a href="https://github.com/quangmanh1801"
-                                    target="_blank" rel="noopener">
+                                <a href="#" target="_blank" rel="noopener">
                                     https://github.com/quangmanh1801
                                 </a>
                             </div>
@@ -1106,8 +1243,7 @@
                             <span class="contact-icon">f</span>
                             <div>
                                 <h3>Facebook</h3>
-                                <a href="https://www.facebook.com/share/1CEvZGewEU/"
-                                    target="_blank" rel="noopener">
+                                <a href="#" target="_blank" rel="noopener">
                                     https://www.facebook.com/share/1CEvZGewEU/
                                 </a>
                             </div>
@@ -1117,8 +1253,7 @@
                             <span class="contact-icon">in</span>
                             <div>
                                 <h3>LinkedIn</h3>
-                                <a href="https://www.linkedin.com/in/m%E1%BA%A1nh-hu%E1%BB%B3nh-a99503339"
-                                    target="_blank" rel="noopener">
+                                <a href="#" target="_blank" rel="noopener">
                                     www.linkedin.com/in/mạnh-huỳnh-a99503339
                                 </a>
                             </div>
@@ -1166,6 +1301,7 @@
         </section>
 
     </main>
+
     <footer class="footer">
         <div class="container">
             <a href="#home" class="logo">QUANG<span>MANH.</span></a>
@@ -1178,65 +1314,6 @@
             <a href="#home" class="back-to-top" aria-label="Về đầu trang">↑</a>
         </div>
     </footer>
-
-  
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-
-            const detailButtons = document.querySelectorAll(".project-detail-btn");
-            const modals = document.querySelectorAll(".project-modal");
-            const closeButtons = document.querySelectorAll(".project-modal-close");
-
-            function openModal(modalId) {
-                const modal = document.getElementById(modalId);
-
-                if (!modal) return;
-
-                modal.classList.add("active");
-                modal.setAttribute("aria-hidden", "false");
-                document.body.style.overflow = "hidden";
-            }
-
-            function closeModal(modal) {
-                if (!modal) return;
-
-                modal.classList.remove("active");
-                modal.setAttribute("aria-hidden", "true");
-                document.body.style.overflow = "";
-            }
-
-            detailButtons.forEach(function (button) {
-                button.addEventListener("click", function () {
-                    openModal(button.dataset.project);
-                });
-            });
-
-            closeButtons.forEach(function (button) {
-                button.addEventListener("click", function () {
-                    closeModal(button.closest(".project-modal"));
-                });
-            });
-
-            modals.forEach(function (modal) {
-                modal.addEventListener("click", function (event) {
-                    if (event.target === modal) {
-                        closeModal(modal);
-                    }
-                });
-            });
-
-            document.addEventListener("keydown", function (event) {
-                if (event.key === "Escape") {
-                    modals.forEach(function (modal) {
-                        if (modal.classList.contains("active")) {
-                            closeModal(modal);
-                        }
-                    });
-                }
-            });
-
-        });
-    </script>
 
     <script src="js/script.js"></script>
 
